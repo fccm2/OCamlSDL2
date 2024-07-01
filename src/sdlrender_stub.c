@@ -27,6 +27,7 @@
 #if OCAML_VERSION < 41200
 #define Val_none Val_int(0)
 #define Some_val(v) Field(v,0)
+#define Is_Some(x)  (((x) & 1) != 1)
 #endif
 
 CAMLprim value
@@ -560,7 +561,7 @@ CAMLprim value
 caml_SDL_SetRenderTarget(value renderer, value texture_opt)
 {
     SDL_Texture* texture =
-        Is_some(texture_opt) ? SDL_Texture_val(Some_val(texture_opt)) : NULL;
+        Is_Some(texture_opt) ? SDL_Texture_val(Some_val(texture_opt)) : NULL;
 
     int r =
         SDL_SetRenderTarget(

@@ -11,7 +11,7 @@
 include Makefile.config
 
 CFLAGS = $(shell sdl2-config --cflags)
-LIBS_ = $(shell sdl2-config --static-libs)
+LIBS_ = $(shell sdl2-config --libs)
 LIBS = $(shell ocaml prm.ml $(LIBS_))
 OCAML = ocaml
 OCAMLDOC = ocamldoc
@@ -195,7 +195,7 @@ sdlba.mli: sdlba.ml $(MLI_FILES_BA_BASE)
 	$(OCAMLOPT) -c $<
 
 %_stub.o: %_stub.c
-	$(OCAMLC) -ccopt "-static $(CFLAGS) -g -O " $<
+	$(OCAMLC) -ccopt " $(CFLAGS) -g -O " $<
 
 sdl2.cma: $(CMO_FILES) libsdlstub.a
 	$(OCAMLMKLIB) -o sdl2 -oc sdl2_stubs $(CMO_FILES) $(LIBS)

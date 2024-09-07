@@ -46,6 +46,10 @@ To install the source directory (tarball release or git clone):
 ```
 $ opam install .
 ```
+Or, if you modified the repository (without commiting):
+```
+$ opam install -w .
+```
 
 
 ## API Documentation

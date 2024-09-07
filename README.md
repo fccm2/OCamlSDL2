@@ -16,7 +16,7 @@ then you should go there instead:
 ## Versions
 
 This version of the bindings is known to work with
-SDL 2.0.9 or 2.0.10 and OCaml 4.07.1 until 4.13.1
+SDL 2.0.9, 2.0.10 or 2.0.14 and OCaml 4.07.1 until 4.13.1
 
 
 ## Compile and Install

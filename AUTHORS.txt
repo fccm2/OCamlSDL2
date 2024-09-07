@@ -23,3 +23,8 @@ Carsten Elton Sørensen <cso at rift.dk>
   Add Sdlrender.get_output_size
   Use new OCaml macros when available
 
+36000000 @ github <36000000 at github.com>, and
+idimension <idimension18 at github.com.noreply>
+  Reported errors with the function SDL_WriteBE32(): "undefined symbol"
+  Switching off all the read/write functions from the RWops module.
+

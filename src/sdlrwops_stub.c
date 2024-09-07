@@ -130,6 +130,14 @@ caml_SDL_RWtell(value context)
       return Val_##IntT(d); \
   }
 
+#define read_int_stub_not_available(IntT, SDL_ReadT, ml_readT) \
+  CAMLprim value \
+  caml_##SDL_ReadT(value rwo) { \
+      caml_failwith("Sdlrwops." ml_readT ": not-available"); \
+      return Val_int(0); \
+  }
+
+#if 0
 read_int_stub(Uint8, SDL_ReadU8)
 
 read_int_stub(Uint16, SDL_ReadLE16)
@@ -139,6 +147,18 @@ read_int_stub(Uint32, SDL_ReadBE32)
 read_int_stub(Uint64, SDL_ReadLE64)
 read_int_stub(Uint64, SDL_ReadBE64)
 
+#else
+
+read_int_stub_not_available(Uint8, SDL_ReadU8, "readU8")
+
+read_int_stub_not_available(Uint16, SDL_ReadLE16, "LittleEndian.read16")
+read_int_stub_not_available(Uint16, SDL_ReadBE16, "BigEndian.read16")
+read_int_stub_not_available(Uint32, SDL_ReadLE32, "LittleEndian.read32")
+read_int_stub_not_available(Uint32, SDL_ReadBE32, "BigEndian.read32")
+read_int_stub_not_available(Uint64, SDL_ReadLE64, "LittleEndian.read64")
+read_int_stub_not_available(Uint64, SDL_ReadBE64, "BigEndian.read64")
+
+#endif
 
 #if 0
 CAMLprim value
@@ -160,6 +180,14 @@ caml_SDL_WriteU8(value rwo, Uint8 d)
       return Val_unit; \
   }
 
+#define write_int_stub_not_available(IntT, SDL_WriteT, ml_writeT) \
+  CAMLprim value \
+  caml_##SDL_WriteT(value rwo, value d) { \
+      caml_failwith("Sdlrwops." ml_writeT ": not-available"); \
+      return Val_unit; \
+  }
+
+#if 0
 write_int_stub(Uint8, SDL_WriteU8, "writeU8")
 
 write_int_stub(Uint16, SDL_WriteLE16, "LittleEndian.write16")
@@ -168,5 +196,18 @@ write_int_stub(Uint32, SDL_WriteLE32, "LittleEndian.write32")
 write_int_stub(Uint32, SDL_WriteBE32, "BigEndian.write32")
 write_int_stub(Uint64, SDL_WriteLE64, "LittleEndian.write64")
 write_int_stub(Uint64, SDL_WriteBE64, "BigEndian.write64")
+
+#else
+
+write_int_stub_not_available(Uint8, SDL_WriteU8, "writeU8")
+
+write_int_stub_not_available(Uint16, SDL_WriteLE16, "LittleEndian.write16")
+write_int_stub_not_available(Uint16, SDL_WriteBE16, "BigEndian.write16")
+write_int_stub_not_available(Uint32, SDL_WriteLE32, "LittleEndian.write32")
+write_int_stub_not_available(Uint32, SDL_WriteBE32, "BigEndian.write32")
+write_int_stub_not_available(Uint64, SDL_WriteLE64, "LittleEndian.write64")
+write_int_stub_not_available(Uint64, SDL_WriteBE64, "BigEndian.write64")
+
+#endif
 
 /* vim: set ts=4 sw=4 et: */

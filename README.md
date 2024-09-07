@@ -15,8 +15,19 @@ then you should go there instead:
 
 ## Versions
 
-This version of the bindings is known to work with
-SDL 2.0.9, 2.0.10 or 2.0.14 and OCaml 4.07.1 until 4.13.1
+This version of the bindings is known to work with SDL versions:
+2.0.9, 2.0.10, 2.0.14
+
+And OCaml version: 4.07.1, 4.11.1, 4.13.1
+
+
+## Alternatives
+
+Alternative set of bindings are available through the project: `Tsdl`
+
+Bindings to the same underlying c-lib can be used at the same time
+(for exemple if you want to switch from one, to another one
+progressively.)
 
 
 ## Compile and Install
@@ -78,6 +89,12 @@ to your dune file:
 ```
   (libraries sdl2)
 ```
+
+## Esy
+
+Files usable with esy are available in [this fork](
+https://github.com/Mbodin/OCamlSDL2).
+
 
 ## License
 

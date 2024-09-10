@@ -28,3 +28,6 @@ idimension <idimension18 at github.com.noreply>
   Reported errors with the function SDL_WriteBE32(): "undefined symbol"
   Switching off all the read/write functions from the RWops module.
 
+Nuxssss (Daniel)
+  Manual (Tutorial), written on Nuxssss(Daniel)'s request.
+

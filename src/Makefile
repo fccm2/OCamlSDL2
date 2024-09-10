@@ -292,6 +292,11 @@ install_h:
 	  $(C_HEADERS) \
 	  $(DESTDIR_H)
 
+.PHONY: install_meta
+install_meta:
+	$(INSTALL_DIR) $(DESTDIR)
+	$(INSTALL_FILES) META $(DESTDIR)
+
 # Dependency visualisation:
 # (needs graphviz to be installed)
 

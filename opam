@@ -1,6 +1,6 @@
 opam-version: "2.0"
 name: "ocamlsdl2"
-maintainer: "monnier.florent@gmail.com"
+maintainer: "Florent Monnier"
 authors: [
   "Florent Monnier"
   "Piotr Mardziel"
@@ -9,9 +9,9 @@ authors: [
   "Carsten Elton Sørensen"
 ]
 license: "restrictionless Zlib"
-homepage: "https://github.com/fccm/OCamlSDL2"
+homepage: "https://github.com/fccm2/OCamlSDL2"
 bug-reports: "https://github.com/fccm/OCamlSDL2/issues"
-dev-repo: "git+https://github.com/fccm/OCamlSDL2.git"
+dev-repo: "git+https://github.com/fccm2/OCamlSDL2.git"
 doc: "https://fccm.github.io/OCamlSDL2/"
 
 tags: [ "bindings" "graphics" "audio" "multimedia" "opengl" "cross-platform" ]
@@ -22,7 +22,7 @@ An OCaml interface to the SDL2 multimedia library for Linux, MacOS and Windows.
 SDL2 homepage: https://www.libsdl.org/
 
 This version of the bindings is known to work with SDL2 versions
-2.0.9 and 2.0.10
+2.0.9, 2.0.10, and 2.0.14
 """
 depends: [
   "ocaml"
@@ -36,8 +36,8 @@ build: [
   [make "-C" "src" "dep"]
   [make "-C" "src" "opt"]
   [make "-C" "src" "byte"]
-  [make "-C" "src" "baopt"]
-  [make "-C" "src" "ba"]
+# [make "-C" "src" "baopt"]
+# [make "-C" "src" "ba"]
 ]
 install: [
   [make "-C" "src" "findinstall"]

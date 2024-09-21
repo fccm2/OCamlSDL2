@@ -62,6 +62,11 @@ Or, if you modified the repository (without commiting):
 $ opam install -w .
 ```
 
+To use the current master branch:
+```
+$ opam pin -y sdl2 https://github.com/fccm/OCamlSDL2.git#master
+```
+
 
 ## API Documentation
 

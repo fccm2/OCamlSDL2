@@ -14,7 +14,7 @@ Alexandru Scvortov <scvalex at gmail.com>
 Guillaume Munch-Maccagnoni <Guillaume.Munch-Maccagnoni at Inria.fr>
   Naked pointers checks and fixes
 
-Carsten Elton Sørensen <cso at rift.dk>
+Carsten Elton Sørensen <cso at rift.dk>, (csoren @ github)
   Add SDL_SetRenderTarget binding
   Implement "hints" API
   Implement texture locking and creation with access type
@@ -22,6 +22,8 @@ Carsten Elton Sørensen <cso at rift.dk>
   Add support for HiDPI
   Add Sdlrender.get_output_size
   Use new OCaml macros when available
+  Add ba targets in the opam file,
+  and add the opam command to use the current master branch
 
 36000000 @ github <36000000 at github.com>, and
 idimension <idimension18 at github.com.noreply>
